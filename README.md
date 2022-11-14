@@ -15,7 +15,7 @@ Versão do Python: 3.10
 ![Grafo 01](./GrafosPnG/Grafo%2001.png "Grafo 01")
     
     
-    python3 ./Main.py < "./GrafosTxt/Grafo 01.txt"
+ python3 ./Main.py < "./GrafosTxt/Grafo 01.txt"
     
     Output:
         Lista de Adjascencia
