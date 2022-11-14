@@ -13,8 +13,10 @@ Versão do Python: 3.10
 #### Grafo que não possuí ciclo Euleriano
 #####  Descobrir se o Grafo abaixo possui ciclo Euleriano.
 ![Grafo 01](./GrafosPnG/Grafo%2001.png "Grafo 01")
+    
+    
     python3 ./Main.py < "./GrafosTxt/Grafo 01.txt"
-
+    
     Output:
         Lista de Adjascencia
         1 -> 3 -> 2
