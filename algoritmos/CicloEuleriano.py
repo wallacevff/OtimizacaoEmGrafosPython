@@ -1,3 +1,4 @@
+from EstuturaDeDados.pilha import Pilha;
 
 def CicloEuleriano(grafo, pilha):
     v = grafo.vertices[0];
@@ -41,4 +42,6 @@ def CicloEuleriano(grafo, pilha):
     print(texto);
     return
 
-
+def EncontraCicloEuleriano(g): #Inicializa as variaveis necessárias para o a função CicloEuleriano
+    pilha = Pilha(); #Pilha Utilizada para encontrar Ciclo Euleriano
+    CicloEuleriano(g, pilha);

@@ -63,3 +63,33 @@ python3 ./Main.py < "./GrafosTxt/Grafo 02.txt"
     5 | 0 1 0 1 0
 
     Ciclo Euleriano: {1, 2, 3, 4, 2, 5, 4, 1}
+
+#####  Descobrir se o Grafo abaixo possui ciclo Euleriano e pontes.
+![Grafo 09](./GrafosPnG/Grafo%2009.png "Grafo 02")
+
+python3 ./Main.py < "./GrafosTxt/Grafo 09.txt"
+
+    Lista de Adjascencia
+    1 -> 2 -> 3
+    2 -> 1 -> 3
+    3 -> 1 -> 2 -> 6
+    4 -> 5 -> 6
+    5 -> 4 -> 6
+    6 -> 3 -> 4 -> 5
+
+
+    Matriz de Adjascencia
+        1  2  3  4  5  6
+    1 | 0  1  1  0  0  0
+    2 | 1  0  1  0  0  0
+    3 | 1  1  0  0  0  1
+    4 | 0  0  0  0  1  1
+    5 | 0  0  0  1  0  1
+    6 | 0  0  1  1  1  0
+
+    Nao possui ciclo Euleriano. Caminho Euleriano encontrado:
+    [6, 4, 5, 6, 3, 1]
+
+    Aresta (2,3) é Ponte
+
+    Aresta (1,2) é Ponte

@@ -5,7 +5,7 @@ class Grafo:
         self.matrizAdj = [] #Matriz de Adjacencia
         self.matrizInc = [] #Matriz de Incidencia
         self.listaAdj = [] #Lista de Adjacencia
-        self.vertices = [];
+        self.vertices = []; #Vertices do Grafo
         for i in range(0,n):
             self.vertices.append(i + 1);
             self.matrizAdj.append([]);

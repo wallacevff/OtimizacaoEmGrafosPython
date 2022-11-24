@@ -1,25 +1,26 @@
-from classes.Grafo import Grafo
-from algoritmos.Ponte import *;
-from EstuturaDeDados.pilha import *;
+from classes.Grafo import Grafo;
+from algoritmos.Pontes import Pontes;
+from algoritmos.CicloEuleriano import EncontraCicloEuleriano;
 
 def main():
     txt = input();
     txt = txt.split(" ");
-    N = int(txt[0]);
-    M = int(txt[1]);
-    grafo = Grafo(N, M)
-    #grafo.inserirRangeMatrizAdj(False);
-    #grafo.inserirRangeListaAdj(False);
-    grafo.inserirTudo(False);
-    pre = []
-    low = []
-    vertices = []
-    Ponte(grafo, 1, 1, 0, pre, low, vertices, True);
+    N = int(txt[0]); #Número de vertices
+    M = int(txt[1]); #Número de arestas
+    
+    grafo = Grafo(N, M); #Cria o grafo com o número de vértices e arestas digitados
+
+    grafo.inserirTudo(False); #Inicializa o Grafo com a Matriz de Adjacência e a Lista de Adjacência
+    
+    grafo.imprimeTudo(); # Imprime a Lista de Adjacência e a Matriz de Adjacência
+    EncontraCicloEuleriano(grafo); #Busca Ciclo Euleriano
+    Pontes(grafo); #Busca Pontes
+    
    # grafo.removeArestaListaAdj(1, 3);
    # grafo.removeArestaListaAdj(1, 2);
-   # grafo.imprimeTudo();
-   # pilha = Pilha();
-   # CicloEuleriano(grafo, pilha)
+    
+    
+   # 
     #print(pilha);
     #pilha.desenpilhar();
     #print(pilha.topo());
