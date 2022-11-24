@@ -55,18 +55,34 @@ class Grafo:
             self.inserirMatrizAdj(u, v, direcional);
         return
     
-    def imprimirMatrizAdj(self):
-        impressao = "\r\nMatriz de Adjascencia\r\n";
+    def strMatrizAdj(self):
+        impressao = "";
         for i in range(0, self.N):
             if(i == 0):
-                impressao += "    {linha} ".format(linha = i + 1);
+                impressao += "    {linha}  ".format(linha = i + 1);
             else:
-                impressao += "{linha} ".format(linha = i + 1);
+                impressao += "{linha}  ".format(linha = i + 1);
         impressao += "\r\n";
         for i in range(0, self.N):
             impressao += "{linha} | ".format(linha = i + 1);
             for j in range(0, self.N):
-                impressao += "{coluna} ".format(coluna = self.matrizAdj[i][j])
+                impressao += "{coluna}  ".format(coluna = self.matrizAdj[i][j])
+            impressao += "\r\n";
+        return impressao;
+
+
+    def imprimirMatrizAdj(self):
+        impressao = "\r\nMatriz de Adjascencia\r\n";
+        for i in range(0, self.N):
+            if(i == 0):
+                impressao += "    {linha}  ".format(linha = i + 1);
+            else:
+                impressao += "{linha}  ".format(linha = i + 1);
+        impressao += "\r\n";
+        for i in range(0, self.N):
+            impressao += "{linha} | ".format(linha = i + 1);
+            for j in range(0, self.N):
+                impressao += "{coluna}  ".format(coluna = self.matrizAdj[i][j])
             impressao += "\r\n";
         print(impressao)
 
@@ -90,3 +106,6 @@ class Grafo:
     def imprimeTudo(self):
         self.imprimirListaAdj();
         self.imprimirMatrizAdj();
+
+    def __str__(self):
+        return self.strMatrizAdj();
