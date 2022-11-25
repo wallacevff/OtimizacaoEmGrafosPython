@@ -36,7 +36,7 @@ def CicloEuleriano(grafo, pilha):
                 texto += ", ";
     if(ciclo[0] != ciclo[len(ciclo) - 1]):
         print("Nao possui ciclo Euleriano. Caminho Euleriano encontrado: ");
-        print(ciclo);
+        print("{}\r\n".format(ciclo));
         return
     texto += "}";
     print(texto);

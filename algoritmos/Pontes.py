@@ -16,6 +16,7 @@ def Ponte(g, p, v, cpre, pre, low, primeiraExecucao):
     pre[v - 1] = cpre;
     low[v - 1] = cpre;
     vizinhosV =  g.pegarVizinhosVertice(v)
+    vertices.append(v);
     for w in vizinhosV:
         if(pre[w - 1] == 0):
             cpre = Ponte(g, v, w, cpre, pre, low, primeiraExecucao);
@@ -30,6 +31,15 @@ def Ponte(g, p, v, cpre, pre, low, primeiraExecucao):
 
 
 def Pontes(g): #Função que vai chamar a função de inicializa as variaveis
-    pre = []
-    low = []
-    Ponte(g, 1, 1, 0, pre, low, True);
+    pre = [];
+    low = [];
+    global vertices;
+    vertices = [];
+    cpre = Ponte(g, 1, 1, 0, pre, low, True);
+    
+    for vertice in g.vertices:
+        if(vertice not in vertices):
+            if(pre[vertice - 1] == 0):
+                cpre = Ponte(g, vertice - 1, vertice - 1, cpre, pre, low, False);
+                
+    print("Vetor Pre: {}\nVetor Low: {}".format(pre, low));

@@ -64,32 +64,32 @@ python3 ./Main.py < "./GrafosTxt/Grafo 02.txt"
 
     Ciclo Euleriano: {1, 2, 3, 4, 2, 5, 4, 1}
 
-#####  Descobrir se o Grafo abaixo possui ciclo Euleriano e pontes.
+#####  Descobrir se o Grafo abaixo possui pontes.
 ![Grafo 09](./GrafosPnG/Grafo%2009.png "Grafo 02")
 
 python3 ./Main.py < "./GrafosTxt/Grafo 09.txt"
 
-    Lista de Adjascencia
-    1 -> 2 -> 3
-    2 -> 1 -> 3
-    3 -> 1 -> 2 -> 6
-    4 -> 5 -> 6
-    5 -> 4 -> 6
-    6 -> 3 -> 4 -> 5
+    2 -> 1 -> 4 -> 5
+    3 -> 1 -> 5
+    4 -> 2 -> 5
+    5 -> 2 -> 3 -> 4 -> 6
+    6 -> 5 -> 7 -> 8
+    7 -> 6 -> 8
+    8 -> 6 -> 7
 
 
     Matriz de Adjascencia
-        1  2  3  4  5  6
-    1 | 0  1  1  0  0  0
-    2 | 1  0  1  0  0  0
-    3 | 1  1  0  0  0  1
-    4 | 0  0  0  0  1  1
-    5 | 0  0  0  1  0  1
-    6 | 0  0  1  1  1  0
+        1  2  3  4  5  6  7  8
+    1 | 0  1  1  0  0  0  0  0
+    2 | 1  0  0  1  1  0  0  0
+    3 | 1  0  0  0  1  0  0  0
+    4 | 0  1  0  0  1  0  0  0
+    5 | 0  1  1  1  0  1  0  0
+    6 | 0  0  0  0  1  0  1  1
+    7 | 0  0  0  0  0  1  0  1
+    8 | 0  0  0  0  0  1  1  0
 
-    Nao possui ciclo Euleriano. Caminho Euleriano encontrado:
-    [6, 4, 5, 6, 3, 1]
+    Aresta (5,6) é Ponte
 
-    Aresta (2,3) é Ponte
-
-    Aresta (1,2) é Ponte
+    Vetor Pre: [1, 2, 5, 3, 4, 6, 7, 8]
+    Vetor Low: [1, 1, 1, 1, 1, 6, 6, 6]

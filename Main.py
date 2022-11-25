@@ -11,9 +11,9 @@ def main():
     grafo = Grafo(N, M); #Cria o grafo com o número de vértices e arestas digitados
 
     grafo.inserirTudo(False); #Inicializa o Grafo com a Matriz de Adjacência e a Lista de Adjacência
-    
+    grafoEu = grafo;
     grafo.imprimeTudo(); # Imprime a Lista de Adjacência e a Matriz de Adjacência
-    EncontraCicloEuleriano(grafo); #Busca Ciclo Euleriano
+    #EncontraCicloEuleriano(grafoEu); #Busca Ciclo Euleriano
     Pontes(grafo); #Busca Pontes
     
    # grafo.removeArestaListaAdj(1, 3);
