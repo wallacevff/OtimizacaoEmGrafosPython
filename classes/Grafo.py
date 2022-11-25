@@ -31,7 +31,7 @@ class Grafo:
             self.inserirListaAdj(u, v, direcional);
     
     def imprimirListaAdj(self):
-      impressao = "\r\nLista de Adjascencia\r\n";
+      impressao = "\r\nLista de Adjacência\r\n";
       for i in range(0, len(self.listaAdj)):
         #self.listaAdj[i].sort();
         impressao += "{vertice}".format(vertice = i + 1);
@@ -72,7 +72,7 @@ class Grafo:
 
 
     def imprimirMatrizAdj(self):
-        impressao = "\r\nMatriz de Adjascencia\r\n";
+        impressao = "\r\nMatriz de Adjacência\r\n";
         for i in range(0, self.N):
             if(i == 0):
                 impressao += "    {linha}  ".format(linha = i + 1);

@@ -18,7 +18,7 @@ Versão do Python: 3.10
  python3 ./Main.py < "./GrafosTxt/Grafo 01.txt"
     
     Output:
-        Lista de Adjascencia
+        Lista de Adjacência
         1 -> 3 -> 2
         2 -> 4 -> 5 -> 1
         3 -> 5 -> 1
@@ -27,7 +27,7 @@ Versão do Python: 3.10
         6 -> 5
 
 
-        Matriz de Adjascencia
+        Matriz de Adjacência
             1 2 3 4 5 6
         1 | 0 1 1 0 0 0
         2 | 1 0 0 1 1 0
@@ -46,7 +46,7 @@ Versão do Python: 3.10
 
 python3 ./Main.py < "./GrafosTxt/Grafo 02.txt"
 
-    Lista de Adjascencia
+    Lista de Adjacência
     1 -> 2 -> 4
     2 -> 1 -> 3 -> 4 -> 5
     3 -> 2 -> 4
@@ -54,7 +54,7 @@ python3 ./Main.py < "./GrafosTxt/Grafo 02.txt"
     5 -> 2 -> 4
 
 
-    Matriz de Adjascencia
+    Matriz de Adjacência
         1 2 3 4 5
     1 | 0 1 0 1 0
     2 | 1 0 1 1 1
@@ -69,6 +69,7 @@ python3 ./Main.py < "./GrafosTxt/Grafo 02.txt"
 
 python3 ./Main.py < "./GrafosTxt/Grafo 08.txt"
 
+    Lista de Adjacência
     2 -> 1 -> 4 -> 5
     3 -> 1 -> 5
     4 -> 2 -> 5
@@ -78,7 +79,7 @@ python3 ./Main.py < "./GrafosTxt/Grafo 08.txt"
     8 -> 6 -> 7
 
 
-    Matriz de Adjascencia
+    Matriz de Adjacência
         1  2  3  4  5  6  7  8
     1 | 0  1  1  0  0  0  0  0
     2 | 1  0  0  1  1  0  0  0
