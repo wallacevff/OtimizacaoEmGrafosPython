@@ -65,9 +65,9 @@ python3 ./Main.py < "./GrafosTxt/Grafo 02.txt"
     Ciclo Euleriano: {1, 2, 3, 4, 2, 5, 4, 1}
 
 #####  Descobrir se o Grafo abaixo possui pontes.
-![Grafo 09](./GrafosPnG/Grafo%2009.png "Grafo 02")
+![Grafo 09](./GrafosPnG/Grafo%2008.png "Grafo 02")
 
-python3 ./Main.py < "./GrafosTxt/Grafo 09.txt"
+python3 ./Main.py < "./GrafosTxt/Grafo 08.txt"
 
     2 -> 1 -> 4 -> 5
     3 -> 1 -> 5
