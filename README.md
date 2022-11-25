@@ -94,3 +94,33 @@ python3 ./Main.py < "./GrafosTxt/Grafo 08.txt"
 
     Vetor Pre: [1, 2, 5, 3, 4, 6, 7, 8]
     Vetor Low: [1, 1, 1, 1, 1, 6, 6, 6]
+
+
+    #####  Descobrir se o Grafo abaixo possui pontes.
+![Grafo 09](./GrafosPnG/Grafo%2009.png "Grafo 02")
+
+python3 ./Main.py < "./GrafosTxt/Grafo 09.txt"
+
+
+    Lista de Adjacência
+    1 -> 2 -> 3
+    2 -> 1 -> 3
+    3 -> 1 -> 2 -> 6
+    4 -> 5 -> 6
+    5 -> 4 -> 6
+    6 -> 3 -> 4 -> 5
+
+
+    Matriz de Adjacência
+        1  2  3  4  5  6
+    1 | 0  1  1  0  0  0
+    2 | 1  0  1  0  0  0
+    3 | 1  1  0  0  0  1
+    4 | 0  0  0  0  1  1
+    5 | 0  0  0  1  0  1
+    6 | 0  0  1  1  1  0
+
+    Aresta (3,6) é Ponte
+
+    Vetor Pre: [1, 2, 3, 5, 6, 4]
+    Vetor Low: [1, 1, 1, 4, 4, 4]
