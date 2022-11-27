@@ -28,7 +28,7 @@ def CicloEuleriano(grafo, pilha):
        # print("{v}, {w}".format(v = v, w = w))
         #grafo.removeArestaListaAdj(v, w);
         while(pilha.tamanho > 0 and tamanhoVizinhanca == 0):
-            w = pilha.desenpilha();
+            w = pilha.desempilha();
             ciclo.append(w);
             texto += "{w}".format(w = w);
             

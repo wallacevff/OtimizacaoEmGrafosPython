@@ -1,7 +1,9 @@
 from classes.Grafo import Grafo;
 from algoritmos.Pontes import Pontes;
 from algoritmos.CicloEuleriano import EncontraCicloEuleriano;
-
+from algoritmos.BuscaEmProfundidade import BuscaEmProfundidade;
+from algoritmos.ComponentesBiconexas import ComponentesBiconexas;
+#from EstuturaDeDados.pilha import Pilha;
 def main():
     txt = input();
     txt = txt.split(" ");
@@ -14,11 +16,12 @@ def main():
     grafoEu = grafo;
     grafo.imprimeTudo(); # Imprime a Lista de Adjacência e a Matriz de Adjacência
     #EncontraCicloEuleriano(grafoEu); #Busca Ciclo Euleriano
-    Pontes(grafo); #Busca Pontes
-    
+    #Pontes(grafo); #Busca Pontes
+   # BuscaEmProfundidade(grafo);
+    ComponentesBiconexas(grafo);
    # grafo.removeArestaListaAdj(1, 3);
    # grafo.removeArestaListaAdj(1, 2);
-    
+
     
    # 
     #print(pilha);

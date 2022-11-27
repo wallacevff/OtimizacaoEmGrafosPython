@@ -7,7 +7,7 @@ class Pilha:
         self.pilha.append(item);
         self.tamanho = self.tamanho + 1;
     
-    def desenpilha(self):
+    def desempilha(self):
         top = self.topo()
         self.tamanho = self.tamanho - 1;
         self.pilha.pop();

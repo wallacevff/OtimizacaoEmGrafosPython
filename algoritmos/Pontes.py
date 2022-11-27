@@ -2,7 +2,7 @@
 # p => O vértice v
 # v => O vértice w
 
-def Ponte(g, p, v, cpre, pre, low, primeiraExecucao):
+def Ponte(g, p, v, cpre, primeiraExecucao):
     if(primeiraExecucao == True):
         n = g.N;
         primeiraExecucao = False;
@@ -11,37 +11,46 @@ def Ponte(g, p, v, cpre, pre, low, primeiraExecucao):
             pre.append(0);
             low.append(0);
             i = i + 1;
-    s = 0;
     cpre = cpre + 1;
     pre[v - 1] = cpre;
     low[v - 1] = cpre;
+    aresta = [p, v]
     vizinhosV =  g.pegarVizinhosVertice(v)
+    #vizinhosV.append(v);
     vertices.append(v);
-    #print(vizinhosV)
+    #print("Vertice: {w}\nAresta: ({ver},{w})\nVizinhos: {viz}\nPre: {pre}\nLow: {low}".format(ver = p, pre=pre, low = low, w = v, viz = vizinhosV));
     for w in vizinhosV:
+        #print("   Analisando o vizinho {} de {} com pre: {} e low: {}".format(w,v,pre[w-1], low[w-1]));
+        #print("   Low de {} atual: {}".format(v, low[v - 1]));
         if(pre[w - 1] == 0):
-            cpre = Ponte(g, v, w, cpre, pre, low, primeiraExecucao);
+            cpre = Ponte(g, v, w, cpre, primeiraExecucao);
             low[v - 1] = min(low[v - 1], low[w - 1]);
-           # print("Aresta ({}, {})".format(v, w))
-          # print("Low de {} atualizado para {}".format(w, low[w - 1]))
+            #print("   Aresta ({}, {})".format(v, w))
+            #print("   Low de {} atualizado para {}".format(w, low[w - 1]))
             if(low[w - 1] == pre[w - 1]):
+                pontes.append(aresta);
                 print("Aresta ({v},{w}) é Ponte\n".format(v=v, w=w));
-        if w != p:
-            low[v - 1] = min(low[v - 1], pre[w - 1]);
-        
+        if (w != p):
+            low[v - 1] = min(low[v - 1], low[w - 1]);
+            #print("   Low de {} atualizado para {}\n   Low Atual: {}".format(v, low[w - 1], low));
     return cpre;
 
 
-def Pontes(g): #Função que vai chamar a função de inicializa as variaveis
+def Pontes(g):
+    global pre;
+    global low;
     pre = [];
     low = [];
     global vertices;
+    global aresta;
+    aresta = [];
+    global pontes;
+    pontes = [];
     vertices = [];
-    cpre = Ponte(g, 1, 1, 0, pre, low, True);
+    cpre = Ponte(g, 8, 8, 0, True);
     
     for vertice in g.vertices:
         if(vertice not in vertices):
             if(pre[vertice - 1] == 0):
-                cpre = Ponte(g, vertice - 1, vertice - 1, cpre, pre, low, False);
-                print("vert: {vertice}".format(vertice=vertice-1))
+                cpre = Ponte(g, vertice - 1, vertice - 1, cpre, False);
     print("Vetor Pre: {}\nVetor Low: {}".format(pre, low));
