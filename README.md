@@ -124,3 +124,41 @@ python3 ./Main.py < "./GrafosTxt/Grafo 09.txt"
 
     Vetor Pre: [1, 2, 3, 5, 6, 4]
     Vetor Low: [1, 1, 1, 4, 4, 4]
+
+#####  Componentes Biconexas.
+![Grafo 07](./GrafosPnG/Grafo%2007.png "Grafo 07")
+
+    python3 ./Main.py < "./GrafosTxt/Grafo 07.txt"
+
+    Lista de Adjacência
+    1 -> 2 -> 7 -> 8
+    2 -> 1 -> 3 -> 4
+    3 -> 2 -> 4 -> 5
+    4 -> 2 -> 3 -> 6
+    5 -> 3 -> 6
+    6 -> 4 -> 5
+    7 -> 1 -> 8
+    8 -> 1 -> 7
+
+
+    Matriz de Adjacência
+        1  2  3  4  5  6  7  8
+    1 | 0  1  0  0  0  0  1  1
+    2 | 1  0  1  1  0  0  0  0
+    3 | 0  1  0  1  1  0  0  0
+    4 | 0  1  1  0  0  1  0  0
+    5 | 0  0  1  0  0  1  0  0
+    6 | 0  0  0  1  1  0  0  0
+    7 | 1  0  0  0  0  0  0  1
+    8 | 1  0  0  0  0  0  1  0
+
+    [3, 5]
+    [5, 6]
+    [4, 6]
+    [2, 4]
+    [3, 4]
+    [2, 3]
+    [1, 2]
+    [1, 8]
+    [7, 8]
+    [1, 7]
