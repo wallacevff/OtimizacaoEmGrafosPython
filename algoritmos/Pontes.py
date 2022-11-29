@@ -47,10 +47,11 @@ def Pontes(g):
     global pontes;
     pontes = [];
     vertices = [];
-    cpre = Ponte(g, 8, 8, 0, True);
+    cpre = Ponte(g, 1, 1, 0, True);
     
     for vertice in g.vertices:
         if(vertice not in vertices):
             if(pre[vertice - 1] == 0):
-                cpre = Ponte(g, vertice - 1, vertice - 1, cpre, False);
+                cpre = Ponte(g, vertice, vertice, cpre, False);
     print("Vetor Pre: {}\nVetor Low: {}".format(pre, low));
+    #print (g.vertices);

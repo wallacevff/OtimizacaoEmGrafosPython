@@ -13,12 +13,16 @@ def main():
     grafo = Grafo(N, M); #Cria o grafo com o número de vértices e arestas digitados
 
     grafo.inserirTudo(False); #Inicializa o Grafo com a Matriz de Adjacência e a Lista de Adjacência
-    grafoEu = grafo;
+    grafoEu = Grafo(grafo.N, grafo.M);
+    #print(len(grafoEu.listaAdj));
+    grafoEu.copiarGrafo(grafo);
+    #print(len(grafo.listaAdj[6]))
     grafo.imprimeTudo(); # Imprime a Lista de Adjacência e a Matriz de Adjacência
-    #EncontraCicloEuleriano(grafoEu); #Busca Ciclo Euleriano
-    #Pontes(grafo); #Busca Pontes
+    EncontraCicloEuleriano(grafoEu); #Busca Ciclo Euleriano
+    Pontes(grafo); #Busca Pontes
    # BuscaEmProfundidade(grafo);
     ComponentesBiconexas(grafo);
+     
    # grafo.removeArestaListaAdj(1, 3);
    # grafo.removeArestaListaAdj(1, 2);
 

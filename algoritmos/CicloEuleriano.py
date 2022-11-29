@@ -7,7 +7,7 @@ def CicloEuleriano(grafo, pilha):
     tamanhoVizinhanca = len(vizinhancaV);
     pilha.empilha(v);
     #print(vizinhancaV);
-    texto = "Ciclo Euleriano: {";
+    texto = "\r\nCiclo Euleriano: {";
     while(pilha.tamanho > 0):
         v = pilha.topo();
         if(tamanhoVizinhanca > 0):
@@ -35,7 +35,7 @@ def CicloEuleriano(grafo, pilha):
             if(pilha.tamanho > 0 and tamanhoVizinhanca == 0):
                 texto += ", ";
     if(ciclo[0] != ciclo[len(ciclo) - 1]):
-        print("Nao possui ciclo Euleriano. Caminho Euleriano encontrado: ");
+        print("\r\nNao possui ciclo Euleriano. Caminho Euleriano encontrado: ");
         print("{}\r\n".format(ciclo));
         return
     texto += "}";

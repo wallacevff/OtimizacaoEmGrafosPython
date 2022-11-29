@@ -27,7 +27,7 @@ def Blocos(g, p, v, cpre, primeiraExecucao):
             if(pre[v - 1] <= low[w - 1]):
                 while(pilha.tamanho > 0):
                     #print("Desempilhando... {}".format(pilha));
-                    print(" {}".format(pilha.desempilha()));            
+                    print("{}".format(pilha.desempilha()));            
             low[v - 1] = min(low[v - 1], low[w - 1]);
         elif w != p:
             low[v -1] = min(low[v -1], pre[w - 1]);
@@ -48,6 +48,7 @@ def ComponentesBiconexas(g):
     pre = [];
     low = []; 
     cpre = 0;
+    print("\r\nComponentes Biconexas:")
     Blocos(g, 8, 8, cpre, True);
     for vertice in g.vertices:
         if(pre[vertice - 1] == 0):

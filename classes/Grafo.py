@@ -107,5 +107,14 @@ class Grafo:
         self.imprimirListaAdj();
         self.imprimirMatrizAdj();
 
+    def copiarGrafo(self, g):
+        for i in range(0, len(g.listaAdj)):
+            for j in range(0, len(g.listaAdj[i])):
+                self.listaAdj[i].append(g.listaAdj[i][j]);
+        for i in range(0, len(g.matrizAdj)):
+            for j in range(0, len(g.matrizAdj[i])):
+                self.matrizAdj[i][j] = g.matrizAdj[i][j];
+
+
     def __str__(self):
         return self.strMatrizAdj();
