@@ -152,6 +152,16 @@ python3 ./Main.py < "./GrafosTxt/Grafo 09.txt"
     7 | 1  0  0  0  0  0  0  1
     8 | 1  0  0  0  0  0  1  0
 
+
+    Nao possui ciclo Euleriano. Caminho Euleriano encontrado:
+    [4, 3, 5, 6, 4, 2, 1, 7, 8, 1]
+
+    Aresta (1,2) é Ponte
+
+    Vetor Pre: [1, 2, 3, 4, 6, 5, 7, 8]
+    Vetor Low: [1, 2, 2, 2, 3, 3, 1, 1]
+
+    Componentes Biconexas:
     [3, 5]
     [5, 6]
     [4, 6]
