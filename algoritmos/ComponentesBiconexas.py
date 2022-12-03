@@ -49,7 +49,7 @@ def ComponentesBiconexas(g):
     low = []; 
     cpre = 0;
     print("\r\nComponentes Biconexas:")
-    Blocos(g, 8, 8, cpre, True);
+    Blocos(g, 1, 1, cpre, True);
     for vertice in g.vertices:
         if(pre[vertice - 1] == 0):
             Blocos(g, vertice, vertice, cpre, False);
