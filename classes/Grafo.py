@@ -1,5 +1,4 @@
 class Grafo:
-    listaAdj = []
     def __init__(self, n, m):
         self.N = n; self.M = m;
         self.matrizAdj = [] #Matriz de Adjacencia
@@ -34,7 +33,7 @@ class Grafo:
       impressao = "\r\nLista de Adjacência\r\n";
       for i in range(0, len(self.listaAdj)):
         #self.listaAdj[i].sort();
-        impressao += "{vertice}".format(vertice = i + 1);
+        impressao += "{vertice}".format(vertice = i + 1).rjust(2, " ");
         for j in range(0, len(self.listaAdj[i])):            
             impressao += " -> {vizinho}".format(vizinho = self.listaAdj[i][j]);
         impressao += "\r\n";
@@ -44,6 +43,8 @@ class Grafo:
         if(direcional != True):
             self.matrizAdj[u -1][v- 1] = 1;
             self.matrizAdj[v -1][u- 1] = 1;
+        else:
+            self.matrizAdj[u -1][v- 1] = 1;
         return;
 
     def inserirRangeMatrizAdj(self, direcional):
@@ -70,19 +71,18 @@ class Grafo:
             impressao += "\r\n";
         return impressao;
 
-
     def imprimirMatrizAdj(self):
         impressao = "\r\nMatriz de Adjacência\r\n";
         for i in range(0, self.N):
             if(i == 0):
-                impressao += "    {linha}  ".format(linha = i + 1);
+                impressao += "     {linha}  ".format(linha = i + 1);
             else:
                 impressao += "{linha}  ".format(linha = i + 1);
         impressao += "\r\n";
         for i in range(0, self.N):
-            impressao += "{linha} | ".format(linha = i + 1);
+            impressao += "{linha}".format(linha = i + 1).rjust(2, " ") + " | ";
             for j in range(0, self.N):
-                impressao += "{coluna}  ".format(coluna = self.matrizAdj[i][j])
+                impressao += "{coluna}  ".format(coluna = self.matrizAdj[i][j]).rjust(2, " ")
             impressao += "\r\n";
         print(impressao)
 
