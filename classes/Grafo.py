@@ -1,5 +1,16 @@
 class Grafo:
-    def __init__(self, n, m):
+    def __init__(self, *args):
+        if(len(args) == 2):
+            self.inicializarGrafo(args[0], args[1]);
+        if(len(args) == 1):
+            num = args[0].rjust(2, "0");
+            f = open("GrafosTxT/Grafo {}.txt".format(num), "r");
+            txtFileArray = f.readlines();
+            result = map(lambda txt : txt.replace("\n", ""), txtFileArray);
+            txtFileArray = list(result);
+            self.inserirTudoArray(txtFileArray);
+            #print(txtFileArray);
+    def inicializarGrafo(self, n, m):
         self.N = n; self.M = m;
         self.matrizAdj = [] #Matriz de Adjacencia
         self.matrizInc = [] #Matriz de Incidencia
@@ -90,6 +101,19 @@ class Grafo:
         for i in range(0, self.M):
             st = input();
             u, v = st.split(" ");
+            u = int(u);
+            v = int(v);
+            self.inserirMatrizAdj(u, v, direcional);
+            self.inserirListaAdj(u, v, direcional);
+    
+    def inserirTudoArray(self, arrayList):
+        st = arrayList[0].split(" ");
+        n = int(st[0]);
+        m = int(st[1]);
+        direcional = st[2] == "True";
+        self.inicializarGrafo(n, m);
+        for i in range(0, self.M):
+            u, v = arrayList[i + 1].split(" ");
             u = int(u);
             v = int(v);
             self.inserirMatrizAdj(u, v, direcional);

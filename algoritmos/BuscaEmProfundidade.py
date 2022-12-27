@@ -24,6 +24,6 @@ def BuscaEmProfundidade(g):
         if(pre[vertice - 1] == 0):
             BP(g, vertice, vertice, cpre, False);
     
-    print(g.vertices);
-    print(pre);
+    print("Vértices: {}".format(g.vertices));
+    print("Vetor Pre: {}".format(pre));
     return;

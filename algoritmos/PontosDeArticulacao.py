@@ -29,7 +29,7 @@ def PA(g, p, v, cpre, primeiraExecucao):
     return cpre;
 
 
-def Articulacao(g):
+def PontosDeArticulacao(g):
     global pre;
     global low;
     global pa;
